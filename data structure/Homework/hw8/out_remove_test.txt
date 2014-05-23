@@ -1,0 +1,67 @@
+Added person Alice
+Added person Bethany
+Added person Chris
+Added person Dan
+Added person Erica
+Added person Fred
+Added person Greg
+Linked friends Alice and Bethany
+Linked friends Alice and Chris
+Linked friends Bethany and Erica
+Linked friends Chris and Alice
+Linked friends Chris and Fred
+Linked friends Dan and Fred
+Linked friends Erica and Bethany
+Linked friends Erica and Chris
+Linked friends Erica and Greg
+Linked friends Fred and Greg
+Linked friends Greg and Erica
+
+Alice
+  friends: Bethany Chris
+  messages:
+Bethany
+  friends: Erica
+  messages:
+Chris
+  friends: Alice Fred
+  messages:
+Dan
+  friends: Fred
+  messages:
+Erica
+  friends: Bethany Chris Greg
+  messages:
+Fred
+  friends: Greg
+  messages:
+Greg
+  friends: Erica
+  messages:
+
+Removed person Bethany
+Unlinked friends Chris and Alice
+
+Alice
+  friends: Chris
+  messages:
+Chris
+  friends: Fred
+  messages:
+Dan
+  friends: Fred
+  messages:
+Erica
+  friends: Chris Greg
+  messages:
+Fred
+  friends: Greg
+  messages:
+Greg
+  friends: Erica
+  messages:
+
+Error trying to remove person Bethany
+Error trying to add person Greg
+Error trying to link friends Greg and Erica
+Error trying to unlink friends Dan and Alice

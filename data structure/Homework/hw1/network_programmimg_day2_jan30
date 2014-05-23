@@ -1,0 +1,293 @@
+
+Layer 1: implementation is given
+Layer 2: 
+
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h>
+struct course
+{
+	char name[80];
+	char * number;		/* Network programming*/
+	int crn;
+
+}
+int main()
+{	
+	int x;
+	printf("sizeof(int) is %d\n", (int)sizeof(x));
+
+	int y;
+	printf("sizeof(int) is %d\n", (int)sizeof(y));
+
+
+	
+	struct course c1;   /* bytes allocated: 80+ sizeof(char* ) + 4 */
+	strcpy(c1.name,"Network Programming");
+	c1.number=malloc(30);
+	strcpy(c1.number,"CSCI-4220");
+	c1.crn=56789;
+
+	struct course c2;
+	struct course * c3; /* bytes allocated : 4 or 8 */
+
+	c3=(struct course *)malloc(sizeof(struct course) );
+	strcpy((*c3).name,"Netprog");
+	c3->number=malloc(30);
+	int section=1;
+	sprintf(c3->number,"CSCI-4220-%02d", section);// fixed width  of 2 digits 
+
+	struct course * courses=(struct course *) malloc(100*sizeof(struct course));
+	//courses is a pointer to first element of the array..
+	
+	struct course * courses=(struct ourse *) calloc(100*sizeof(struct course));
+	// difference--> malloc is not initialised and calloc will allocate memory and will initialise size to 0
+
+	struct course * c4=calloc(1,sizeof(struct course));
+	/* it make sure that c4 points to zeroed out memory*/
+
+	realloc changes the size of yhe memory block 
+	free takes void pointer as input--> 
+	free(c4->number);
+	//we need to free memory because server will play for years.
+
+	free(courses);   
+
+	(*c3).crn=56789;
+	c3->crn=56789;
+
+	// dynamically allocate an array in C
+
+
+
+	return EXIT_SUCCESS;
+
+}
+
+vi fork.c
+
+// create a child process 
+//fork duplicates athe running proicess to create a new child process
+#include <stdio.h>
+	#include<stdlib.h>
+	#include<sys/types.h>			//parent needs to handle the termination
+									// wait system call block and wait until the child process terminates(via a SIGCHILD signal)
+	#include<sys./wait.h>
+	#include <unistd.h>
+int main()
+{
+	pid_t pid;
+	pid=fork();
+	//fork makes process that makes the exact duplicate of the child process
+	 //except PID(child get assigned a new pid)
+	 //PPID(parent PID)
+	 // list of child child processes
+	 // metadata on resource allocation(CPU usage, total runtime)
+	 if(PID0)
+	 {
+	 perror("fork() failed");
+	 return EXIT_FAILURE;
+	 }
+	 if(PID==0)
+	 {
+	 printf("CHILD:I am new\n");
+	 }
+	 else //pid>0 so we are still in the parent process
+	 {
+	 printf("PARENT;just created child PID");
+	 }
+
+	 printf("pid %d sys good-bye\n",getpid());
+	return EXIT_SUCCESS;
+// by catching the SIGCHLD via wait(), the zombie process is de;leted from process list ie the resources are freed up
+
+}
+
+
+
+
+
+----------------
+void convert_flush_left(std::ifstream & in_str,std::vector<std::string> & input_vector, std::vector<string> & output_vector, std::ofstream & out_str, int count_var){
+std::string x;
+int count=count_var;
+//int i=0;
+
+for(int w=0;w<count_var+4;w++)
+ 	{
+ 	out_str<<"-";
+ 		
+ 	}
+ 	out_str<< std::endl;
+	out_str<<"|"<<" ";
+
+for(int h=0;h<input_vector.size();h++){
+ 		
+  		if(count>0 && count>=(input_vector[h].size()+1))
+  		{
+  			count=count-(input_vector[h].size())-1;
+ 			//std::cout<<"*";
+ 			out_str<< input_vector[h]<<" ";
+ 		}
+ 		else //if(count<=0 || count<=(x.size()-1)) 
+ 		{
+ 			for(int z=0;z<count;z++)
+ 				{
+ 				out_str<<" ";
+ 				}
+ 		out_str<<" "<<"|";
+ 		out_str<<std::endl;
+ 		count=count_var;
+ 		out_str<<"|"<<" ";
+ 		out_str<< output_vector[h]<<" ";
+ 		count=(count-(input_vector[h].size())-1) ;
+ 		}
+
+ 	}
+ 	for(int q=0;q<count;q++)
+ 		{
+ 		out_str<<" ";
+ 		}
+ 	out_str<<" "<<"|";
+ 	out_str<<std::endl;
+ 	for(int s=0;s<count_var+4;s++)
+ 	{
+ 	out_str<<"-";
+ 		
+ 	}
+ 	out_str<< std::endl;
+}
+
+
+ //The width restriction in specified by the user of the program.  It is read in as the third command line argument.  In one of the examples:
+//./justify.exe example.txt example_16_flush_left.txt 16 flush_left
+//"./justify.exe" is the name of the program,
+//"example.txt" is the input file,
+ //	"example_16_flush_left.txt" is the output file,
+//"16" is the specified width,
+//and "flush_left" the the command to flush left.
+
+
+ 	
+ 	=================================
+ 	void full_justify(std::ifstream & in_str, std::vector<std::string> & input_vector,std::vector<std::string> & output_vector ,std::ofstream & out_str, int count_var){
+
+	std::string line="";
+	std::string outputstring="";
+	std::vector <std::string> vect;
+	std::vector <std::string> temp;
+ 	std::vector<std::string> final_vect;
+ 	std::string ddd="";
+ 	int spaceadd;
+ 	int spaceadd1;
+	int count=count_var;
+	int words_in_line=0;
+
+for(int i=0;i<count_var+4;i++)
+ 	{
+ 	out_str<<"-";	
+ 	}
+ 	out_str<< std::endl;
+	out_str<<"| ";
+
+	for(unsigned int i=0;i<input_vector.size();i++)
+	{
+								if(input_vector[i].size()>count_var)
+								{
+										std::string s1;
+										std::string s2;
+										std::string s4;
+										std::string s3=input_vector[i];
+										s1=s3.substr(0,count_var-1);
+										s2=s3.substr(count_var-1,(count_var-1));
+										s4=s3.substr((count_var*2)-1,count_var-1);
+										out_str<< s1<<"- |"<<std::endl<<"| ";
+										out_str<< s2<<"- |"<<std::endl<<"| ";
+										out_str<< s4<<"          |"<<std::endl;
+										count=count-(s4.size());
+										out_str<<"| ";
+									}
+								else if(count>0 && count>=(input_vector[i].size()+1) )
+						  		{ 	
+						 				if(count==count_var)
+						 				{
+						 				line.append(input_vector[i]);
+						 				count=count-(input_vector[i].size());
+						 				words_in_line=words_in_line+1;
+						 				
+						 				}
+						 				else
+						 				{
+						 				line.append(" ").append(input_vector[i]);
+						 				count=count-(input_vector[i].size())-1;
+						 				words_in_line=words_in_line+1;
+						 				
+						 				}
+						 		}
+						 		else 
+						 		{
+						 				
+						 				if(words_in_line==1)
+						 					{
+						 						spaceadd=count;
+						 						spaceadd1=0;
+						 					}
+						 				else
+						 					{
+						 					spaceadd=count/(words_in_line-1);
+						 					spaceadd1=count%(words_in_line-1);
+						 					std::cout<<spaceadd;
+
+						 					}
+
+						 				for(unsigned int f=0;f<line.size();f++)	
+						 				{
+						 					if(isspace(line[f]))
+						 					{
+						 						for(unsigned int u=1;u<=spaceadd+spaceadd1;u++)
+						 						{
+						 							out_str<<" ";	
+						 						}
+						 						
+						 						out_str<<line[f];
+						 					}
+						 					else{
+
+						 						out_str<<line[f];
+						 					}
+						 					
+						 				}
+ 											
+								 			line="";
+								 			out_str<<" |";
+								 			out_str<<std::endl;
+								 			
+								 			out_str<<"| ";
+								 			words_in_line=0;
+								 			if(count==count_var)
+								 			{
+								 			line.append(input_vector[i]);
+								 			count=count-input_vector[i].size();
+								 			words_in_line=words_in_line+1;
+											}
+								 			else
+								 			{
+								 			line.append(" ").append(input_vector[i]);
+								 			count=count-input_vector[i].size()-1;
+								 			words_in_line=words_in_line+1;
+								 			}
+ 								}
+
+
+	} 	
+												
+											 	line="";
+											 	out_str<<"   |";
+											 	out_str<<std::endl;
+											 	for(int i=0;i<count_var+4;i++)
+											 	{
+											 	out_str<<"-";
+											 		
+											 	}
+											 	out_str<< std::endl;
+}

@@ -1,0 +1,18 @@
+int main(){
+	std::map<std::string,int>::iterator it=counters.find(s);
+
+	if(counters.find(s)==counters.end()){
+	counters.insert(std::make_pairs(s,1));
+	}
+	else{
+	((counters.find(s))->second )++;
+	}
+	//
+	std::pair<std::map<std::string,int>::iterator,bool> tmp=counters.insert(std::make_pairs(s,1));
+	if(tmp.second==false){
+	(tmp.first)->second++;
+	
+	}
+	//version 3
+
+}

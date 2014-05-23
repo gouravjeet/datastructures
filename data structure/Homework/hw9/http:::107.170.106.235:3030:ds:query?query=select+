@@ -1,0 +1,5 @@
+http://107.170.106.235:3030/ds/query?query=select+distinct+%3Fcounty+%3Festablishment++where+%7B%3Fthing+%3Chttps%3A%2F%2Fgithub.com%2Ftimrdf%2Fcsv2rdf4lod-automation%2Fwiki%2FCSV2RDF4LOD_BASE_URI%23%2Fsource%2Fdataset%2Fdataset%2FInformationTechnology2011%2Fvocab%2Fraw%2Farea_name%3E%0D%0A+++++++%3Fcounty+%3B%0D%0A%3Chttps%3A%2F%2Fgithub.com%2Ftimrdf%2Fcsv2rdf4lod-automation%2Fwiki%2FCSV2RDF4LOD_BASE_URI%23%2Fsource%2Fdataset%2Fdataset%2FInformationTechnology2011%2Fvocab%2Fraw%2Ftotal_establishments%3E+%3Festablishment.%7D&output=text&stylesheet=
+
+
+http://107.170.106.235:3030/ds/query?query=select+distinct+%3Fcounty+%3Festablishment++where+%7B%3Fthing+%3Chttps%3A%2F%2Fgithub.com%2Ftimrdf%2Fcsv2rdf4lod-automation%2Fwiki%2FCSV2RDF4LOD_BASE_URI%23%2Fsource%2Fdataset%2Fdataset%2FInformationTechnology2011%2Fvocab%2Fraw%2Farea_name%3E%0D%0A+++++++%3Fcounty+%3B%0D%0A%3Chttps%3A%2F%2Fgithub.com%2Ftimrdf%2Fcsv2rdf4lod-automation%2Fwiki%2FCSV2RDF4LOD_BASE_URI%23%2Fsource%2Fdataset%2Fdataset%2FInformationTechnology2011%2Fvocab%2Fraw%2Ftotal_establishments%3E+%3Festablishment.%7D&output=text&stylesheet=
+

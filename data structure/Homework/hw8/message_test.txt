@@ -1,0 +1,34 @@
+add_person Alice
+add_person Bethany
+add_person Chris
+add_person Dan
+add_person Erica
+add_person Fred
+add_person Greg
+
+add_friendship Alice Bethany
+add_friendship Alice Chris
+add_friendship Bethany Erica
+add_friendship Chris Alice
+add_friendship Chris Fred
+add_friendship Dan Fred
+add_friendship Erica Bethany
+add_friendship Erica Chris
+add_friendship Erica Greg
+add_friendship Fred Greg
+add_friendship Greg Erica
+
+add_message Alice "the cow jumped over the moon"
+add_message Fred "one fish two fish red fish blue fish"
+add_message Alice "hello"
+print
+
+pass_messages
+print
+
+pass_messages
+print
+
+pass_messages
+print
+

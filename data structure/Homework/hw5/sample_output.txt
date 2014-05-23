@@ -1,0 +1,80 @@
+============================================================================
+SIMPLE TRAIN TEST
+     ~~~~                                                            
+    ||                                                               
+   ---100   ------101   ------102   ------103   ------104   ------105
+ / ENGINE   |       |   |       |   |  dine |   |       |   | sleep |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 6, total weight = 400, speed on 2% incline = 70.3, avg distance to dining = 1.3, closest engine to sleeper = 5
+============================================================================
+SHIP FREIGHT TEST
+Remaining Unused Engines:
+     ~~~~        ~~~~        ~~~~        ~~~~        ~~~~
+    ||          ||          ||          ||          ||   
+   ---111      ---112      ---113      ---114      ---115
+ / ENGINE    / ENGINE    / ENGINE    / ENGINE    / ENGINE
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 5, total weight = 750, speed on 2% incline = 187.5
+Prepared Trains for Shipment:
+     ~~~~                                                                                    
+    ||                                                                                       
+   ---106   ------116   ------117   ------118   ------119   ------120   ------121   ------122
+ / ENGINE   |   40  |   |   45  |   |   30  |   |   65  |   |   35  |   |   35  |   |   35  |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 8, total weight = 435, speed on 2% incline = 64.7
+     ~~~~        ~~~~                                                                                                                        
+    ||          ||                                                                                                                           
+   ---107      ---108   ------123   ------124   ------125   ------126   ------127   ------128   ------129   ------130   ------131   ------132
+ / ENGINE    / ENGINE   |   50  |   |   85  |   |   50  |   |   45  |   |   40  |   |   85  |   |   85  |   |   45  |   |   45  |   |   65  |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 12, total weight = 895, speed on 2% incline = 62.8
+     ~~~~        ~~~~                                                                                                
+    ||          ||                                                                                                   
+   ---109      ---110   ------133   ------134   ------135   ------136   ------137   ------138   ------139   ------140
+ / ENGINE    / ENGINE   |   75  |   |   40  |   |   65  |   |   65  |   |   75  |   |   45  |   |   95  |   |   90  |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 10, total weight = 850, speed on 2% incline = 66.2
+============================================================================
+SEPARATE TRAINS #1
+     ~~~~                                                                                ~~~~                                    
+    ||                                                                                  ||                                       
+   ---141   ------142   ------143   ------144   ------145   ------146   ------147      ---148   ------149   ------150   ------151
+ / ENGINE   |       |   |       |   |  dine |   | sleep |   | sleep |   |       |    / ENGINE   |       |   |  dine |   |       |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 11, total weight = 750, speed on 2% incline = 75.0, avg distance to dining = 1.6, closest engine to sleeper = 2
+Separate Statistics: num unlinks = 1, num links = 0, num shifts = 0, 
+  right train is 6.2% slower than the original and the left train is 7.1% faster than the original.
+     ~~~~                                                
+    ||                                                   
+   ---141   ------142   ------143   ------144   ------145
+ / ENGINE   |       |   |       |   |  dine |   | sleep |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 5, total weight = 350, speed on 2% incline = 80.4, avg distance to dining = 1.5, closest engine to sleeper = 4
+                             ~~~~                                    
+                            ||                                       
+------146   ------147      ---148   ------149   ------150   ------151
+| sleep |   |       |    / ENGINE   |       |   |  dine |   |       |
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 6, total weight = 400, speed on 2% incline = 70.3, avg distance to dining = inf, closest engine to sleeper = 2
+============================================================================
+SEPARATE TRAINS #2
+                                                                             ~~~~                                ~~~~
+                                                                            ||                                  ||   
+------152   ------153   ------154   ------155   ------156   ------157      ---158   ------159   ------160      ---161
+|       |   |  dine |   | sleep |   |       |   |  dine |   |       |    / ENGINE   |       |   | sleep |    / ENGINE
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 10, total weight = 700, speed on 2% incline = 80.4, avg distance to dining = inf, closest engine to sleeper = 1
+Separate Statistics: num unlinks = 3, num links = 2, num shifts = 2, 
+  left and right train speeds are equal to the original.
+                                                     ~~~~
+                                                    ||   
+------152   ------153   ------154   ------155      ---158
+|       |   |  dine |   | sleep |   |       |    / ENGINE
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 5, total weight = 350, speed on 2% incline = 80.4, avg distance to dining = 1.5, closest engine to sleeper = 2
+                                                     ~~~~
+                                                    ||   
+------156   ------157   ------159   ------160      ---161
+|  dine |   |       |   |       |   | sleep |    / ENGINE
+-oo---oo- + -oo---oo- + -oo---oo- + -oo---oo- + -oo---oo-
+#cars = 5, total weight = 350, speed on 2% incline = 80.4, avg distance to dining = 1.5, closest engine to sleeper = 1

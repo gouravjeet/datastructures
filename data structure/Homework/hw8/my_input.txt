@@ -1,0 +1,21 @@
+add_person Alice
+add_person Bethany
+add_person Chris
+add_person Fred
+add_person Greg
+add_person Dan
+add_person Erica
+
+add_friendship Alice Dan
+add_friendship Alice Dan
+
+remove_friendship Chris Alice
+
+add_message Alice "the cow jumped over the moon"
+add_message Alice "hello"
+add_message Erica "hello"
+
+print
+
+print_invite_list Alice 1
+print_invite_list Yuvraj 11

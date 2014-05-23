@@ -1,0 +1,31 @@
+add_person Alice
+add_person Bethany
+add_person Chris
+add_person Dan
+add_person Erica
+add_person Fred
+add_person Greg
+
+add_friendship Alice Bethany
+add_friendship Alice Chris
+add_friendship Bethany Erica
+add_friendship Chris Alice
+add_friendship Chris Fred
+add_friendship Dan Fred
+add_friendship Erica Bethany
+add_friendship Erica Chris
+add_friendship Erica Greg
+add_friendship Fred Greg
+add_friendship Greg Erica
+
+print
+
+remove_person Bethany
+remove_friendship Chris Alice
+
+print
+
+remove_person Bethany
+add_person Greg
+add_friendship Greg Erica
+remove_friendship Dan Alice
